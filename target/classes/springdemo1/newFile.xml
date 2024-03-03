@@ -1,0 +1,28 @@
+<!-- 08/12/2023 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<bean id="c1" class="springdemo1.Car" scope="prototype"></bean>
+<bean id="b1" class="springdemo1.Bus"></bean>
+</beans>
+
+<!-- 09/12/2023
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+		<bean id="b1" class="springdemo1.Bus">
+			<constructor-arg ref="e1"></constructor-arg>
+		</bean>
+		<bean id="e1" class="springdemo1.Engine"></bean>
+		<bean id="sony" class="springdemo1.SonymMusicSystem"></bean>
+		<bean id="jbl" class="springdemo1.JblMusicSystem"></bean>
+		<bean id="c1" class="springdemo1.Car">
+			<property name="musicSystem" ref="sony"></property>
+			<! in ref we have to pass the object of whichever object you have created, that you want to inject -->
+			<!-- musicsystem will accept null or object of musicsystem  -->
+		<!-- </bean>
+</beans> -->
